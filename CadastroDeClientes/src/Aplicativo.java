@@ -77,7 +77,7 @@ public class Aplicativo {
                 case 2:
                     List<Cliente> listaDeClientes = new ArrayList<>(iClienteDAO.SEARCH_ALL());
                     StringBuilder clientes = new StringBuilder();
-                    for (Cliente cliente: listaDeClientes) {
+                    for (Cliente cliente : listaDeClientes) {
                         clientes.append("\n" + cliente);
                     }
 
@@ -106,16 +106,7 @@ public class Aplicativo {
                     continue;
                 case 4:
                     String cpfParaExcluir = JOptionPane.showInputDialog(null, "Digite o CPF do cliente para excluir os dados: ", "Excluir Dados", JOptionPane.INFORMATION_MESSAGE);
-                    int opcao = JOptionPane.showOptionDialog(
-                            null,
-                            "Você realmente deseja excluir ?",
-                            "Confirmação",
-                            JOptionPane.YES_NO_OPTION,
-                            JOptionPane.QUESTION_MESSAGE,
-                            null,
-                            new String[]{"Sim", "Não"},
-                            "Sim"
-                    );
+                    int opcao = JOptionPane.showOptionDialog(null, "Você realmente deseja excluir ?", "Confirmação", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Sim", "Não"}, "Sim");
 
                     if (opcao == JOptionPane.YES_OPTION) {
                         iClienteDAO.DELETE(cpfParaExcluir);
@@ -132,7 +123,5 @@ public class Aplicativo {
                     System.exit(0);
             }
         }
-
-
     }
 }

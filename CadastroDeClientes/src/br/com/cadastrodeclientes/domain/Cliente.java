@@ -21,10 +21,7 @@ public class Cliente {
     // Metodos especiais
     @Override
     public String toString() {
-        return "CPF: " + this.getCpf() +
-                "\nNome: " + this.getNome() +
-                "\nNúmero: " + this.getNumero() +
-                "\nEndereço: " + this.getEndereco() + "\n";
+        return "CPF: " + this.getCpf() + "\nNome: " + this.getNome() + "\nNúmero: " + this.getNumero() + "\nEndereço: " + this.getEndereco() + "\n";
     }
 
     @Override

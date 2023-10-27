@@ -40,16 +40,16 @@ public class GerenciamentoDeClientes implements IClienteDAO {
 
     @Override
     public Boolean UPDATE(Cliente cliente) {
-         Cliente clienteCadastrado = this.mapDeClientes.get(cliente.getCpf());
+        Cliente clienteCadastrado = this.mapDeClientes.get(cliente.getCpf());
 
-         if (clienteCadastrado != null) {
-             clienteCadastrado.setNome(cliente.getNome());
-             clienteCadastrado.setNumero(cliente.getNumero());
-             clienteCadastrado.setEndereco(cliente.getEndereco());
-             return false;
-         } else {
-             return true;
-         }
+        if (clienteCadastrado != null) {
+            clienteCadastrado.setNome(cliente.getNome());
+            clienteCadastrado.setNumero(cliente.getNumero());
+            clienteCadastrado.setEndereco(cliente.getEndereco());
+            return false;
+        } else {
+            return true;
+        }
 
     }
 
